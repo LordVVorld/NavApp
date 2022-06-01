@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/redFragment">
+
+
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="com.example.navapp.RedFragment"
+        android:label="red_fragment"
+        tools:layout="@layout/red_fragment" >
+        <action
+            android:id="@+id/action_redFragment_to_greenFragment"
+            app:destination="@id/greenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="com.example.navapp.GreenFragment"
+        android:label="green_fragment"
+        tools:layout="@layout/green_fragment" >
+        <action
+            android:id="@+id/action_greenFragment_to_blueFragment"
+            app:destination="@id/blueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="com.example.navapp.BlueFragment"
+        android:label="blue_fragment"
+        tools:layout="@layout/blue_fragment" >
+        <action
+            android:id="@+id/action_blueFragment_to_redFragment"
+            app:destination="@id/redFragment" />
+    </fragment>
+</navigation>
